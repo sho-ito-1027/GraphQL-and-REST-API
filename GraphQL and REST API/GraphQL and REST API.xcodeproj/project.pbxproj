@@ -15,6 +15,7 @@
 		C6A7ED5B24348A45002EAE90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A7ED5924348A45002EAE90 /* LaunchScreen.storyboard */; };
 		C6A7ED6624348A45002EAE90 /* GraphQL_and_REST_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7ED6524348A45002EAE90 /* GraphQL_and_REST_APITests.swift */; };
 		C6A7ED7124348A45002EAE90 /* GraphQL_and_REST_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7ED7024348A45002EAE90 /* GraphQL_and_REST_APIUITests.swift */; };
+		C6A7ED7F24348C27002EAE90 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7ED7E24348C27002EAE90 /* Requestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C6A7ED6C24348A45002EAE90 /* GraphQL and REST APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphQL and REST APIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A7ED7024348A45002EAE90 /* GraphQL_and_REST_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL_and_REST_APIUITests.swift; sourceTree = "<group>"; };
 		C6A7ED7224348A45002EAE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6A7ED7E24348C27002EAE90 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		C6A7ED4D24348A44002EAE90 /* GraphQL and REST API */ = {
 			isa = PBXGroup;
 			children = (
+				C6A7ED7E24348C27002EAE90 /* Requestable.swift */,
 				C6A7ED4E24348A44002EAE90 /* AppDelegate.swift */,
 				C6A7ED5024348A44002EAE90 /* SceneDelegate.swift */,
 				C6A7ED5224348A44002EAE90 /* ViewController.swift */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6A7ED5324348A44002EAE90 /* ViewController.swift in Sources */,
+				C6A7ED7F24348C27002EAE90 /* Requestable.swift in Sources */,
 				C6A7ED4F24348A44002EAE90 /* AppDelegate.swift in Sources */,
 				C6A7ED5124348A44002EAE90 /* SceneDelegate.swift in Sources */,
 			);
