@@ -16,6 +16,10 @@
 		C6A7ED6624348A45002EAE90 /* GraphQL_and_REST_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7ED6524348A45002EAE90 /* GraphQL_and_REST_APITests.swift */; };
 		C6A7ED7124348A45002EAE90 /* GraphQL_and_REST_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7ED7024348A45002EAE90 /* GraphQL_and_REST_APIUITests.swift */; };
 		C6A7ED7F24348C27002EAE90 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7ED7E24348C27002EAE90 /* Requestable.swift */; };
+		C6F8C69A2435AE59007923B2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C6992435AE59007923B2 /* Events.swift */; };
+		C6F8C69D2435AE9B007923B2 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C69C2435AE9B007923B2 /* Actor.swift */; };
+		C6F8C69F2435AFC5007923B2 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C69E2435AFC5007923B2 /* Repo.swift */; };
+		C6F8C6A32435B484007923B2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C6A22435B484007923B2 /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		C6A7ED7024348A45002EAE90 /* GraphQL_and_REST_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL_and_REST_APIUITests.swift; sourceTree = "<group>"; };
 		C6A7ED7224348A45002EAE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6A7ED7E24348C27002EAE90 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		C6F8C6992435AE59007923B2 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		C6F8C69C2435AE9B007923B2 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		C6F8C69E2435AFC5007923B2 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		C6F8C6A22435B484007923B2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 		C6A7ED4D24348A44002EAE90 /* GraphQL and REST API */ = {
 			isa = PBXGroup;
 			children = (
+				C6F8C69B2435AE85007923B2 /* Model */,
+				C6F8C6982435AE2C007923B2 /* Request */,
 				C6A7ED7E24348C27002EAE90 /* Requestable.swift */,
 				C6A7ED4E24348A44002EAE90 /* AppDelegate.swift */,
 				C6A7ED5024348A44002EAE90 /* SceneDelegate.swift */,
@@ -129,6 +139,24 @@
 				C6A7ED7224348A45002EAE90 /* Info.plist */,
 			);
 			path = "GraphQL and REST APIUITests";
+			sourceTree = "<group>";
+		};
+		C6F8C6982435AE2C007923B2 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C6F8C6992435AE59007923B2 /* Events.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		C6F8C69B2435AE85007923B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6F8C69C2435AE9B007923B2 /* Actor.swift */,
+				C6F8C69E2435AFC5007923B2 /* Repo.swift */,
+				C6F8C6A22435B484007923B2 /* Event.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F8C6A32435B484007923B2 /* Event.swift in Sources */,
+				C6F8C69F2435AFC5007923B2 /* Repo.swift in Sources */,
 				C6A7ED5324348A44002EAE90 /* ViewController.swift in Sources */,
 				C6A7ED7F24348C27002EAE90 /* Requestable.swift in Sources */,
 				C6A7ED4F24348A44002EAE90 /* AppDelegate.swift in Sources */,
+				C6F8C69D2435AE9B007923B2 /* Actor.swift in Sources */,
 				C6A7ED5124348A44002EAE90 /* SceneDelegate.swift in Sources */,
+				C6F8C69A2435AE59007923B2 /* Events.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
