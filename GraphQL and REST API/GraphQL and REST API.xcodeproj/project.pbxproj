@@ -175,6 +175,7 @@
 				C6A7ED4724348A44002EAE90 /* Sources */,
 				C6A7ED4824348A44002EAE90 /* Frameworks */,
 				C6A7ED4924348A44002EAE90 /* Resources */,
+				C60C96EE2435D739000845A3 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -290,6 +291,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C60C96EE2435D739000845A3 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				../Carthage/Build/iOS/Apollo.framework,
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6A7ED4724348A44002EAE90 /* Sources */ = {
