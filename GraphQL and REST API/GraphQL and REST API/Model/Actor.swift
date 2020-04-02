@@ -12,10 +12,10 @@ struct Actor: Decodable {
     let id: Int
     let login: String
     let displayLogin: String
-    let gravatarID: String
+    let gravatarId: String
     let url: String
-    let avatarURL: String
+    let avatarUrl: String
 
-    lazy var accessURL: URL = URL(string: url)!
-    lazy var accessAvatarURL: URL = URL(string: avatarURL)!
+    var accessUrl: URL { URL(string: url)! }
+    var accessAvatarUrl: URL { URL(string: avatarUrl)! }
 }

@@ -11,6 +11,6 @@ import Foundation
 struct Events: Requestable {
     typealias Response = [Event]
 
-    var method: HTTPMethod = .get
-    var path: String = "/events"
+    private(set) var method: HTTPMethod = .get
+    private(set) var path: String = "/events"
 }
