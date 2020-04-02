@@ -21,6 +21,7 @@
 		C6F8C69F2435AFC5007923B2 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C69E2435AFC5007923B2 /* Repo.swift */; };
 		C6F8C6A32435B484007923B2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C6A22435B484007923B2 /* Event.swift */; };
 		C6F8C6A52435B5F5007923B2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C6A42435B5F5007923B2 /* API.swift */; };
+		C6F8C6A72435C532007923B2 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C6A62435C532007923B2 /* EventCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C6F8C69E2435AFC5007923B2 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		C6F8C6A22435B484007923B2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C6F8C6A42435B5F5007923B2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C6F8C6A62435C532007923B2 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				C6A7ED5924348A45002EAE90 /* LaunchScreen.storyboard */,
 				C6A7ED5C24348A45002EAE90 /* Info.plist */,
 				C6F8C6A42435B5F5007923B2 /* API.swift */,
+				C6F8C6A62435C532007923B2 /* EventCell.swift */,
 			);
 			path = "GraphQL and REST API";
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				C6F8C6A32435B484007923B2 /* Event.swift in Sources */,
 				C6F8C69F2435AFC5007923B2 /* Repo.swift in Sources */,
+				C6F8C6A72435C532007923B2 /* EventCell.swift in Sources */,
 				C6A7ED5324348A44002EAE90 /* ViewController.swift in Sources */,
 				C6A7ED7F24348C27002EAE90 /* Requestable.swift in Sources */,
 				C6A7ED4F24348A44002EAE90 /* AppDelegate.swift in Sources */,
