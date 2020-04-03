@@ -24,6 +24,9 @@
 		C6F8C6A72435C532007923B2 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C6A62435C532007923B2 /* EventCell.swift */; };
 		C6FF93972436CFCD004605F1 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C6FF93962436CFCD004605F1 /* schema.json */; };
 		C6FF939A2436E2BA004605F1 /* GraphQLAPI.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C6FF93992436E2BA004605F1 /* GraphQLAPI.graphql */; };
+		C6FF939C243701CC004605F1 /* GraphQLAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FF939B243701CC004605F1 /* GraphQLAPI.swift */; };
+		C6FF93BB24370DF2004605F1 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF93BA24370DF2004605F1 /* Apollo.framework */; };
+		C6FF93BC24370DF2004605F1 /* Apollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF93BA24370DF2004605F1 /* Apollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,20 @@
 			remoteInfo = "GraphQL and REST API";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C6FF93BD24370DF2004605F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C6FF93BC24370DF2004605F1 /* Apollo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C6A7ED4B24348A44002EAE90 /* GraphQL and REST API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GraphQL and REST API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +84,9 @@
 		C6F8C6A62435C532007923B2 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		C6FF93962436CFCD004605F1 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C6FF93992436E2BA004605F1 /* GraphQLAPI.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GraphQLAPI.graphql; sourceTree = "<group>"; };
+		C6FF939B243701CC004605F1 /* GraphQLAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQLAPI.swift; sourceTree = "<group>"; };
+		C6FF939E243701F8004605F1 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = ../Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
+		C6FF93BA24370DF2004605F1 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FF93BB24370DF2004605F1 /* Apollo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,7 @@
 				C6A7ED6424348A45002EAE90 /* GraphQL and REST APITests */,
 				C6A7ED6F24348A45002EAE90 /* GraphQL and REST APIUITests */,
 				C6A7ED4C24348A44002EAE90 /* Products */,
+				C6FF939D243701F8004605F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +139,7 @@
 		C6A7ED4D24348A44002EAE90 /* GraphQL and REST API */ = {
 			isa = PBXGroup;
 			children = (
+				C6FF939B243701CC004605F1 /* GraphQLAPI.swift */,
 				C6FF93992436E2BA004605F1 /* GraphQLAPI.graphql */,
 				C6FF93962436CFCD004605F1 /* schema.json */,
 				C6F8C69B2435AE85007923B2 /* Model */,
@@ -171,6 +194,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C6FF939D243701F8004605F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6FF93BA24370DF2004605F1 /* Apollo.framework */,
+				C6FF939E243701F8004605F1 /* Apollo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +215,7 @@
 				C6A7ED4824348A44002EAE90 /* Frameworks */,
 				C6A7ED4924348A44002EAE90 /* Resources */,
 				C60C96EE2435D739000845A3 /* Carthage */,
+				C6FF93BD24370DF2004605F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,7 +343,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				../Carthage/Build/iOS/Apollo.framework,
+				"${SRCROOT}/Carthage/Build/iOS/Apollo.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -337,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSCRIPT_PATH=\"${SRCROOT}/../Carthage/Checkouts/apollo-ios/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" GraphQLAPI.swift\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSCRIPT_PATH=\"${SRCROOT}/Carthage/Checkouts/apollo-ios/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" GraphQLAPI.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -351,6 +384,7 @@
 				C6F8C6A72435C532007923B2 /* EventCell.swift in Sources */,
 				C6A7ED5324348A44002EAE90 /* ViewController.swift in Sources */,
 				C6A7ED7F24348C27002EAE90 /* Requestable.swift in Sources */,
+				C6FF939C243701CC004605F1 /* GraphQLAPI.swift in Sources */,
 				C6A7ED4F24348A44002EAE90 /* AppDelegate.swift in Sources */,
 				C6F8C69D2435AE9B007923B2 /* Actor.swift in Sources */,
 				C6A7ED5124348A44002EAE90 /* SceneDelegate.swift in Sources */,
@@ -532,6 +566,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U38WFWB5D6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "GraphQL and REST API/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -551,6 +589,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U38WFWB5D6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "GraphQL and REST API/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
