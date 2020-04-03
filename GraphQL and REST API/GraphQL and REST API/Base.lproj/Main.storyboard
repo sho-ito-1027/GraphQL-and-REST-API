@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vol-3x-ZR8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventTableViewCell" id="YCk-3H-cz9" customClass="EventTableViewCell" customModule="GraphQL_and_REST_API" customModuleProvider="target">
@@ -119,18 +119,56 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Fsp-Hl-XWc"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OqW-nX-UrP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="256"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axL-bQ-Vuc">
+                                        <rect key="frame" x="117" y="12.5" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="dAq-DU-HFR"/>
+                                            <constraint firstAttribute="width" secondItem="axL-bQ-Vuc" secondAttribute="height" multiplier="1:1" id="its-LS-3y3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="baM-Mt-xjv">
+                                        <rect key="frame" x="0.0" y="200.5" width="414" height="47.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4P-9M-jCi">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="baM-Mt-xjv" firstAttribute="top" secondItem="axL-bQ-Vuc" secondAttribute="bottom" constant="8" id="Kct-pv-RqC"/>
+                                    <constraint firstItem="axL-bQ-Vuc" firstAttribute="centerX" secondItem="OqW-nX-UrP" secondAttribute="centerX" id="LZn-mc-wdl"/>
+                                    <constraint firstItem="axL-bQ-Vuc" firstAttribute="centerY" secondItem="OqW-nX-UrP" secondAttribute="centerY" multiplier="0.8" id="P3m-Qe-Wuu"/>
+                                    <constraint firstAttribute="trailing" secondItem="baM-Mt-xjv" secondAttribute="trailing" id="YO3-IF-aZq"/>
+                                    <constraint firstAttribute="height" constant="256" id="q61-Np-KyG"/>
+                                    <constraint firstAttribute="bottom" secondItem="baM-Mt-xjv" secondAttribute="bottom" constant="8" id="shJ-SC-RbF"/>
+                                    <constraint firstItem="baM-Mt-xjv" firstAttribute="leading" secondItem="OqW-nX-UrP" secondAttribute="leading" id="tv3-wJ-HLd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="vol-3x-ZR8" firstAttribute="top" secondItem="OqW-nX-UrP" secondAttribute="bottom" id="8oU-bd-K0W"/>
                             <constraint firstAttribute="bottom" secondItem="vol-3x-ZR8" secondAttribute="bottom" id="CsN-Ze-pkt"/>
-                            <constraint firstItem="vol-3x-ZR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kr0-0Q-bYi"/>
+                            <constraint firstItem="OqW-nX-UrP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nxp-Kr-xmP"/>
                             <constraint firstItem="vol-3x-ZR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="POn-j4-IEd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vol-3x-ZR8" secondAttribute="trailing" id="U1t-CS-ZIm"/>
+                            <constraint firstItem="OqW-nX-UrP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VKZ-cs-S2M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OqW-nX-UrP" secondAttribute="trailing" id="zGy-k8-raU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SMA-4r-yZF"/>
                     <connections>
+                        <outlet property="myIconImageView" destination="axL-bQ-Vuc" id="apS-65-WQd"/>
+                        <outlet property="myNameLabel" destination="b4P-9M-jCi" id="piG-bP-Dhw"/>
                         <outlet property="tableView" destination="vol-3x-ZR8" id="tmc-NW-7v4"/>
                     </connections>
                 </viewController>

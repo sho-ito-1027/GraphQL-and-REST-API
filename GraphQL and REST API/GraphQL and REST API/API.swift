@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Apollo
 
 public enum Result<T> {
     case success(T)
@@ -18,6 +19,7 @@ public final class API: NSObject {
     public typealias Completion<T: Requestable> = ((Result<T.Response>, RequestCount) -> Void)
 
     public static let shared = API()
+    public static let graphql = GraphQL()
 
     private var configuration: URLSessionConfiguration {
         let config = URLSessionConfiguration.default
@@ -26,6 +28,17 @@ public final class API: NSObject {
     }
 
     private override init() {}
+
+    public final class GraphQL: NSObject {
+        private(set) lazy var apollo: ApolloClient = {
+            let configuration: URLSessionConfiguration = .default
+            configuration.httpAdditionalHeaders = ["Authorization": "Bearer \("GitHub TOKEN")"]
+            let session = URLSession(configuration: configuration)
+            let url = URL(string: "https://api.github.com/graphql")!
+
+            return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, session: session))
+        }()
+    }
 }
 
 extension API {

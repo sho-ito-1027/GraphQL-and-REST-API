@@ -8,19 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+typealias Viewer = QueryQuery.Data.Viewer
 
+class ViewController: UIViewController {
+    @IBOutlet weak var myIconImageView: UIImageView!
+    @IBOutlet weak var myNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     private(set) var items: [Event] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        do {
+            myIconImageView.layer.cornerRadius = myIconImageView.frame.width / 2
+            myIconImageView.clipsToBounds = true
+        }
 
-        fetch()
+        fetchRESTAPI()
+        fetchGraphQL()
     }
 
-    private func fetch() {
+    private func fetchRESTAPI() {
         API.shared.request(Events()) { [unowned self] (result, _) in
             switch result {
             case .success(let response):
@@ -32,6 +40,30 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+    }
+
+    private func fetchGraphQL() {
+        API.graphql.apollo.fetch(query: QueryQuery()) { [unowned self] (result) in
+            switch result {
+            case .success(let data):
+                print(data)
+                guard let viewer = data.data?.viewer else { return }
+                self.update(viewer: viewer)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    private func update(viewer: Viewer) {
+
+        do {
+            let data = try Data(contentsOf: URL(string: viewer.avatarUrl)!)
+            myIconImageView.image = UIImage(data: data)
+        } catch {
+            print(error)
+        }
+        myNameLabel.text = viewer.name
     }
 }
 

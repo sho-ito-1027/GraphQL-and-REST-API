@@ -13,6 +13,7 @@ public final class QueryQuery: GraphQLQuery {
         __typename
         id
         name
+        avatarUrl
       }
     }
     """
@@ -56,6 +57,7 @@ public final class QueryQuery: GraphQLQuery {
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .scalar(String.self)),
+        GraphQLField("avatarUrl", type: .nonNull(.scalar(String.self))),
       ]
 
       public private(set) var resultMap: ResultMap
@@ -64,8 +66,8 @@ public final class QueryQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(id: GraphQLID, name: String? = nil) {
-        self.init(unsafeResultMap: ["__typename": "User", "id": id, "name": name])
+      public init(id: GraphQLID, name: String? = nil, avatarUrl: String) {
+        self.init(unsafeResultMap: ["__typename": "User", "id": id, "name": name, "avatarUrl": avatarUrl])
       }
 
       public var __typename: String {
@@ -93,6 +95,16 @@ public final class QueryQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      /// A URL pointing to the user's public avatar.
+      public var avatarUrl: String {
+        get {
+          return resultMap["avatarUrl"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "avatarUrl")
         }
       }
     }

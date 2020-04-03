@@ -2,5 +2,6 @@ query Query {
     viewer {
         id
         name
+        avatarUrl
     }
 }
