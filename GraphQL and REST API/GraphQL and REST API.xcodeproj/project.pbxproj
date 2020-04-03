@@ -85,7 +85,6 @@
 		C6FF93962436CFCD004605F1 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C6FF93992436E2BA004605F1 /* GraphQLAPI.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GraphQLAPI.graphql; sourceTree = "<group>"; };
 		C6FF939B243701CC004605F1 /* GraphQLAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQLAPI.swift; sourceTree = "<group>"; };
-		C6FF939E243701F8004605F1 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = ../Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 		C6FF93BA24370DF2004605F1 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				C6FF93BA24370DF2004605F1 /* Apollo.framework */,
-				C6FF939E243701F8004605F1 /* Apollo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
